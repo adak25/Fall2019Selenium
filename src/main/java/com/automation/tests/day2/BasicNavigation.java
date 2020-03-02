@@ -13,6 +13,8 @@ public class BasicNavigation {
         WebDriver driver = new ChromeDriver();
 
         driver.get("http://google.com");
+        driver.manage().window().maximize();
+        driver.manage().window().fullscreen();
 
         Thread.sleep(3000);
 
