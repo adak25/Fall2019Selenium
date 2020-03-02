@@ -36,6 +36,10 @@ public class BasicNavigation {
         }else {
             System.out.println("Test Faild");
         }
+
+        driver.navigate().back();
+
+        verifyRquals(driver.getTitle(),"Google");
         driver.close();
     }
     public static void verifyRquals(String arg1, String arg2){
