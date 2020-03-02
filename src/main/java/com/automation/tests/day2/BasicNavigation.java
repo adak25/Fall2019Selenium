@@ -16,6 +16,15 @@ public class BasicNavigation {
 
         Thread.sleep(3000);
 
+        String title = driver.getTitle();
+        String expectedTitle = "Google";
+        System.out.println(title);
+        if (expectedTitle.equals(title)) {
+
+            System.out.println("Test PASSED");
+        }else {
+            System.out.println("Test Faild");
+        }
         driver.close();
     }
 }
