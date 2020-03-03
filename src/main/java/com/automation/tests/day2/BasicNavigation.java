@@ -14,7 +14,7 @@ public class BasicNavigation {
 
         driver.get("http://google.com");
         driver.manage().window().maximize();
-        driver.manage().window().fullscreen();
+       // driver.manage().window().fullscreen();
 
         Thread.sleep(3000);
 
@@ -46,6 +46,7 @@ public class BasicNavigation {
         driver.navigate().forward();
         Thread.sleep(3000);
         System.out.println("title: "+driver.getTitle());
+        System.out.println("URL: "+ driver.getCurrentUrl());
 
         driver.navigate().refresh();
         Thread.sleep(3000);
