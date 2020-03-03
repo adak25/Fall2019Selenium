@@ -47,6 +47,9 @@ public class BasicNavigation {
         Thread.sleep(3000);
         System.out.println("title: "+driver.getTitle());
 
+        driver.navigate().refresh();
+        Thread.sleep(3000);
+
         driver.close();
     }
     public static void verifyRquals(String arg1, String arg2){
