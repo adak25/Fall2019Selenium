@@ -29,6 +29,7 @@ public class BasicNavigation {
         }
 
         driver.navigate().to("http://amazon.com");
+        Thread.sleep(3000);
 
         if (driver.getTitle().toLowerCase().contains("amazon")){
 
@@ -38,8 +39,14 @@ public class BasicNavigation {
         }
 
         driver.navigate().back();
+        Thread.sleep(3000);
 
         verifyRquals(driver.getTitle(),"Google");
+
+        driver.navigate().forward();
+        Thread.sleep(3000);
+        System.out.println("title: "+driver.getTitle());
+
         driver.close();
     }
     public static void verifyRquals(String arg1, String arg2){
