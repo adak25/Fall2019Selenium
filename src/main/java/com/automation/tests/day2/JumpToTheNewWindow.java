@@ -6,9 +6,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.Set;
 
-public class QuitVsClose {
+public class JumpToTheNewWindow {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception{
 
         WebDriverManager.chromedriver().version("79").setup();
         WebDriver driver = new ChromeDriver();
@@ -29,7 +29,7 @@ public class QuitVsClose {
         for (String windowId : windowHandles){
 
             if (!windowId.equals(windowHandle)) {
-                    driver.switchTo().window(windowId);
+                driver.switchTo().window(windowId);
 
             }
 
@@ -53,3 +53,4 @@ public class QuitVsClose {
         }
     }
 }
+
